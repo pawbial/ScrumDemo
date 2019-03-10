@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import pl.sdacademy.scrumdemo.ScrumDemo.model.Contact;
 import pl.sdacademy.scrumdemo.ScrumDemo.service.ContactService;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Controller
 @RequestMapping
@@ -15,6 +17,7 @@ public class ContactController {
 
     @Autowired
     private ContactService contactService;
+
 
 
     @GetMapping(path = "/list")

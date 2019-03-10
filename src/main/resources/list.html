@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book</title>
+</head>
+<body>
+
+<h1>Address Book</h1>
+<table>
+    <thead>
+    <tr>
+        <th> First name</th>
+        <th> Last name</th>
+        <th> Phone number</th>
+        <th> Email address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="person : ${persons?}">
+        <td><span th:text="${person.firstName}"> First name </span></td>
+        <td><span th:text="${person.firstName}"> Last name </span></td>
+        <td><span th:text="${person.firstName}"> Phone number </span></td>
+        <td><span th:text="${person.firstName}"> Email address </span></td>
+        <td>
+            <form action="edit.html">
+                <input type="submit" value="Edit contact">
+            </form>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+    <form action="add.html">
+        <input type="submit" value="Add contact">
+    </form>
+
+
+</body>
+</html>
+
+
+<!--public class Contact {-->
+<!--@Id-->
+<!--Long id;-->
+<!--String firsName;-->
+<!--String lastName;-->
+<!--String phoneNumber;-->
+<!--String email;-->
