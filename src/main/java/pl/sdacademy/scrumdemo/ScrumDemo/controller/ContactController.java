@@ -26,7 +26,7 @@ public class ContactController {
     }
 
     @PostMapping(path = "/add")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public void addNewContact (@RequestBody Contact contact) {
         contactService.saveContact(contact);
 
