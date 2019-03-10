@@ -41,7 +41,7 @@ public class ContactController {
 
     }
 
-    @GetMapping(path="remove")
+    @GetMapping(path="/remove")
     public @ResponseBody String remove  (@RequestParam Long id){
         contactService.removeContact(id);
         return "Removed!";
