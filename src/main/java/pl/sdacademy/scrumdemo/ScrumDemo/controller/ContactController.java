@@ -32,5 +32,15 @@ public class ContactController {
 
     }
 
+    @PutMapping
+    public @ResponseBody String editContact (@RequestBody Contact contact){
+
+        contactService.saveContact(contact);
+
+
+    }
+
+
+
 
 }

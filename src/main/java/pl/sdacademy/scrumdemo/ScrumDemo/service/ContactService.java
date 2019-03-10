@@ -16,6 +16,8 @@ public class ContactService {
     @Autowired
     private ContactRepository contactRepository;
 
+    public
+
 
     public Collection<Contact> getAllContacts () {
 
@@ -23,6 +25,11 @@ public class ContactService {
     }
 
     public void saveContact (Contact contact) {
+
+        contactRepository.save(contact);
+    }
+
+    public void editContact(Contact contact){
 
         contactRepository.save(contact);
     }
