@@ -36,7 +36,7 @@ public class ContactController {
     public @ResponseBody String editContact (@RequestBody Contact contact){
 
         contactService.saveContact(contact);
-
+        return "Edit";
 
 
     }
