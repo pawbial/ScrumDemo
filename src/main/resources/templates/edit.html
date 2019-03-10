@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Editing contact</title>
+</head>
+<body>
+<h1>Editing contact</h1>
+<form action="list.html" method="post" id="editing_form">
+    First name: <input type="text" name="firstName" th:value="${firstName}"><br/>
+    Last name: <input type="text" name="lastName" value="${lastName}"><br/>
+    Phone number: <input type="text" name="phoneNumber" value="${phoneNumber}"><br/>
+    Email: <input type="text" name="email" value="${email}"><br/>
+</form>
+
+<button type="submit" form="editing_form" value="submit">Submit</button><br/>
+<button type="submit" action="list.html" value="cancel">Cancel</button><br/>
+<button type="submit" action="/delete.html" value="submit">Delete</button><br/>
+
+</body>
+</html>
