@@ -38,8 +38,14 @@ public class ContactController {
         contactService.saveContact(contact);
 
 
+
     }
 
+    @GetMapping(path="remove")
+    public @ResponseBody String remove  (@RequestParam Long id){
+        contactService.removeContact(id);
+        return "Removed!";
+    }
 
 
 

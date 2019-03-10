@@ -16,7 +16,7 @@ public class ContactService {
     @Autowired
     private ContactRepository contactRepository;
 
-    public
+
 
 
     public Collection<Contact> getAllContacts () {
