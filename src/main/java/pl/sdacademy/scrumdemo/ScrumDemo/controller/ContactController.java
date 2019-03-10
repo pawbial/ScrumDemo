@@ -2,7 +2,9 @@ package pl.sdacademy.scrumdemo.ScrumDemo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 import pl.sdacademy.scrumdemo.ScrumDemo.model.Contact;
 import pl.sdacademy.scrumdemo.ScrumDemo.service.ContactService;
@@ -34,6 +36,12 @@ public class ContactController {
         contact.setPhoneNumber(phoneNumber);
         contactService.saveContact(contact);
         return "Saved!";
+    }
+
+    @GetMapping(path="remove")
+    public @ResponseBody String remove  (@RequestParam Long id){
+        contactService.removeContact(id);
+        return "Removed!";
     }
 
 
