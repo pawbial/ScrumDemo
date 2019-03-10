@@ -8,12 +8,14 @@
 <h1>Editing contact</h1>
 <form action="list.html" method="post" id="editing_form">
     First name: <input type="text" name="firstName" th:value="${firstName}"><br/>
-    Last name: <input type="text" name="lastName" value="Kowalski"><br/>
-    Phone number: <input type="text" name="phoneNumber" value="1234"><br/>
-    Email: <input type="text" name="email" value="jankowalski@gmail.com"><br/>
+    Last name: <input type="text" name="lastName" value="${lastName}"><br/>
+    Phone number: <input type="text" name="phoneNumber" value="${phoneNumber}"><br/>
+    Email: <input type="text" name="email" value="${email}"><br/>
 </form>
 
-<button type="submit" form="editing_form" value="submit">Submit</button>
+<button type="submit" form="editing_form" value="submit">Submit</button><br/>
+<button type="submit" value="cancel">Cancel</button><br/>
+<button type="submit" form="editing_form" value="submit">Delete</button><br/>
 
 </body>
 </html>
