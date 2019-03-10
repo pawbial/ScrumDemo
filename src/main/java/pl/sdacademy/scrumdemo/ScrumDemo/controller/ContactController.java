@@ -44,6 +44,12 @@ public class ContactController {
 
     }
 
+    @GetMapping(path = "/edit/{id}")
+    public String getById(@RequestParam Long id, Model model) {
+        Contact contact = contactService.getById(id).get();
+        model.addAttribute("contact", contact);
+        return "edit";
+    }
     @GetMapping(path="/remove")
     public @ResponseBody String remove  (@RequestParam Long id){
         contactService.removeContact(id);

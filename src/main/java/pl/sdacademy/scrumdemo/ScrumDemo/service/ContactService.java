@@ -6,6 +6,7 @@ import pl.sdacademy.scrumdemo.ScrumDemo.model.Contact;
 import pl.sdacademy.scrumdemo.ScrumDemo.repository.ContactRepository;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
 
@@ -36,6 +37,10 @@ public class ContactService {
     public void removeContact(Long id){
 
         contactRepository.deleteById(id);
+    }
+    public Optional<Contact> getById(Long id) {
+        return contactRepository.findById(id);
+
     }
 
 }
