@@ -2,7 +2,9 @@ package pl.sdacademy.scrumdemo.ScrumDemo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.sdacademy.scrumdemo.ScrumDemo.model.Contact;
 import pl.sdacademy.scrumdemo.ScrumDemo.service.ContactService;
@@ -19,12 +21,11 @@ public class ContactController {
     private ContactService contactService;
 
 
-
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping(path = "/list")
-    public @ResponseBody Collection<Contact> getAllContacts () {
-
-        return contactService.getAllContacts();
-
+    public String getAllContacts (Model model) {
+        model.addAttribute("contacts", contactService.getAllContacts());
+        return "list";
     }
 
     @GetMapping(path = "/add")
