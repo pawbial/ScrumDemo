@@ -32,11 +32,11 @@ public class ContactController {
 
     }
 
-    @PutMapping
-    public @ResponseBody String editContact (@RequestBody Contact contact){
+    @PutMapping(path = "/edit")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void editContact (@RequestBody Contact contact){
 
         contactService.saveContact(contact);
-        return "Edit";
 
 
     }

@@ -18,7 +18,6 @@ public class ContactService {
 
 
 
-
     public Collection<Contact> getAllContacts () {
 
         return (Collection<Contact>) contactRepository.findAll();
