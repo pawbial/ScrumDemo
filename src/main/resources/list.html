@@ -19,9 +19,9 @@
     <tbody>
     <tr th:each="person : ${persons?}">
         <td><span th:text="${person.firstName}"> First name </span></td>
-        <td><span th:text="${person.firstName}"> Last name </span></td>
-        <td><span th:text="${person.firstName}"> Phone number </span></td>
-        <td><span th:text="${person.firstName}"> Email address </span></td>
+        <td><span th:text="${person.lastName}"> Last name </span></td>
+        <td><span th:text="${person.phoneNumber}"> Phone number </span></td>
+        <td><span th:text="${person.email}"> Email address </span></td>
         <td>
             <form action="edit.html">
                 <input type="submit" value="Edit contact">
